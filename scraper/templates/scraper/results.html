@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Keyword</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for company in data %}
+            <tr>
+                <td>{{ company.company_name }}</td>
+                <td>{{ company.phone_number }}</td>
+                <td>{{ company.email }}</td>
+                <td>{{ company.keyword }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
